@@ -41,5 +41,24 @@ else:
     print("Fail to redject the null hypotesis")
 #concluding the average log‑AQI is significantly higher than the benchmark, indicating air quality is, on average, worse than that target.
 
+# Two Sample T test,comparing city vs non city AQI Log
+city = df[df["city_name"] != "Not in a city"]["aqi_log"]
+non_city = df[df["city_name"] == "Not in a city"]["aqi_log"]
+
+t_test,p_val = stats.ttest_ind(a = non_city,b=city,equal_var=False)
+print("Two Sample T test result")
+print("-----------------------")
+print(f"Non City Mean:{non_city.mean():.4f}")
+print(f"City  Mean: {city.mean():.4f}")
+print(f"t Statistic:{t_test:.4f}")
+print(f"p value:{p_val:.4f}")
+
+if p_val < 0.05:
+    print("Reject the null hypothesis")
+else:
+    print("Fail to redject the null hypotesis")
+#This confirms that urban areas experience significantly higher pollution levels than non‑urban sites in our dataset.
+
+
 
 
