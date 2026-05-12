@@ -23,7 +23,7 @@ To find out wether urban areas experience higher pollution levels than non-urban
 # Quick Start
 ## 1.Clone the repository 
   ```bash
-git clone [https://github.com/anon-public/air_quality_dataset_analysis.git](https://github.com/anon-public/air_quality_dataset_analysis.git)
+git clone [https://github.com/YOURUSERNAME/air_quality_dataset_analysis.git](https://github.com/YOURUSERNAME/air_quality_dataset_analysis.git)
 cd air_quality_dataset_analysis
    ```
 ## 2. Install the dependencies
